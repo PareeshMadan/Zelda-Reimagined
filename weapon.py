@@ -6,8 +6,9 @@ class Weapon(pygame.sprite.Sprite):
         direction = player.status.split('_')[0]
 
         #graphic
-        
-        self.image = pygame.Surface((100,100))
+        full_path = f'/Users/pareeshmadan/Documents/PythonZelda/images/graphics/weapons/{player.weapon}/{direction}.png'
+        self.image = pygame.image.load(full_path).convert_alpha()
+
 
         #placemnt
         if direction == 'right':
